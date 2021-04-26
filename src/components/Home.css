@@ -1,0 +1,37 @@
+.home {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.home__Ad{
+  font-family:  Lato, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color:rgb(27, 27, 50);
+  margin-bottom: 40px;
+}
+
+.home__alumni{
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.home__alumni > article{
+  font-size: 22.5px;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+}
+
+.home__companyName{
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+}
