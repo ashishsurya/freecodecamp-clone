@@ -22,8 +22,9 @@
   width: 250px;
   background-color: #3b3b4f;
   border: none;
-  height: 20px;
+  height: 25px;
   color: white;
+  margin-left: 10px;
 }
 
 .header__buttons {
@@ -32,8 +33,7 @@
   padding: 10px;
   align-items: center;
   justify-content: space-between;
-  width:180px;
-  
+  width:200px;
 }
 
 .header__Button{
@@ -41,14 +41,16 @@
   background-color: #0a0a23;
   border:none;
   color:white;
-  width:60px;
-  padding:10px;
+  width:80px;
+  padding:5px;
   border:1px solid;
   cursor: pointer;
+  height: 30px;
+  font-size: large;
 }
 
 .signIn{
-  width:70px;
+  
   background-color: #FECC4C;
   color:black
 }

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 10px;
+}
+
+.register > header {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: rgb(27, 27, 50);
+  margin-bottom: 10px;
+}
+
+.register > article {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19.8px;
+  font-weight: 600;
+  color: rgb(27, 27, 50);
+  text-align: center;
+}
+.register > form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  padding-right: 0;
+  margin: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 500px;
+  box-shadow: 2px 2px 2px rgb(90, 89, 89);
+}
+
+.register > form > article {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13.8px;
+  font-weight: 600;
+  color: rgb(190, 184, 184);
+  margin-bottom: 5px;
+}
+.register > form > h5 {
+  margin-bottom: 7px;
+  font-size: larger;
+}
+
+.register > form > input {
+  margin-bottom: 7px;
+  margin-left: 3px;
+  border: 1px solid rgb(155, 153, 153);
+  padding: 5px 3px;
+  width: 96%;
+}
+
+.register__signinButton {
+  width: 96%;
+  margin: 10px 0;
+  height: 30px;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  cursor: pointer;
+  border-color: #fecc4c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.register__registerButton {
+  width: 96%;
+  margin: 10px 0;
+  height: 30px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
