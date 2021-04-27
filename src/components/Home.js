@@ -16,7 +16,7 @@ const Home = () => {
         Earn certifications.
       </div>
       <div className='home__alumni'>
-        <article>
+        <article style={{textAlign:'justify'}}>
           Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten
           jobs at tech companies including:
         </article>
@@ -31,10 +31,13 @@ const Home = () => {
           className='home__comapanyNames'
         >
           {names.map((name) => (
-            <section className='home__companyName'>{name}</section>
+            <section className={`home__companyName ${name}`}>{name}</section>
           ))}
         </div>
       </div>
+      <button className="home__getStartedButton">
+        Get Started ( it's free)
+      </button>
     </div>
   );
 };
