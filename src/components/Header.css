@@ -16,15 +16,19 @@
 .header__logo {
   font-family: 'Roboto Mono', monospace;
   font-size: 40px;
+  padding-right: 25px;
 }
 
 .header__searchInput {
-  width: 250px;
+  width: 400px;
   background-color: #3b3b4f;
-  border: none;
+  border: 1px solid #d0d0d5;
   height: 25px;
   color: white;
   margin-left: 10px;
+  outline: none;
+  padding: 0 10px 0 30px;
+  font-size: 18px;
 }
 
 .header__buttons {
@@ -33,26 +37,25 @@
   padding: 10px;
   align-items: center;
   justify-content: space-between;
-  width:200px;
+  width: 200px;
 }
 
-.header__Button{
-  padding:5px;
+.header__Button {
+  padding: 5px;
   background-color: #0a0a23;
-  border:none;
-  color:white;
-  width:80px;
-  padding:5px;
-  border:1px solid;
+  border: none;
+  color: white;
+  width: 80px;
+  padding: 5px;
+  border: 1px solid;
   cursor: pointer;
   height: 30px;
   font-size: large;
 }
 
-.signIn{
-  
-  background-color: #FECC4C;
-  color:black
+.signIn {
+  background-color: #fecc4c;
+  color: black;
 }
 
 @media screen and (max-width: 980px) {

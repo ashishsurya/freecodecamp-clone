@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../firebase';
+import { useStateValue } from '../StateProvider';
 import './Register.css';
 const Register = () => {
+  const history = useHistory();
   // state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [{ user }, dispatch] = useStateValue('');
 
   const headerStyle = {
     width: '100%',
@@ -22,9 +27,30 @@ const Register = () => {
   // auth handling functions
   const signIn = async (e) => {
     e.preventDefault();
+    await auth
+      .signInWithEmailAndPassword(email, password)
+      .then((authUser) => {
+        history.push('/');
+      })
+      .catch((error) => {
+        alert(error.message);
+        setEmail('');
+        setPassword('');
+      });
   };
 
-  const register = async () => {};
+  const register = async (e) => {
+    e.preventDefault();
+    await auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((authUser) => {
+        console.log(authUser.user);
+        history.push('/');
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <>
       <Link className='header__link' style={headerStyle} to='/'>
