@@ -27,7 +27,7 @@ const Register = () => {
   const register = async () => {};
   return (
     <>
-      <Link style={headerStyle} to='/'>
+      <Link className='header__link' style={headerStyle} to='/'>
         freeCodeCamp
       </Link>
       <div className='register'>

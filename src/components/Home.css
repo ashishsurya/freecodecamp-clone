@@ -7,70 +7,65 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  
+
   justify-content: center;
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
 }
 
-.home__Ad{
-  font-family:  Lato, sans-serif;
+.home__Ad {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 45px;
   font-weight: 700;
-  color:rgb(27, 27, 50);
+  color: rgb(27, 27, 50);
   margin-bottom: 40px;
 }
 
-.home__alumni{
-
+.home__alumni {
   display: flex;
   flex-direction: column;
 }
 
-
-.home__alumni > article{
+.home__alumni > article {
   font-size: 22.5px;
-  font-family: Lato, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 
-.home__companyName{
+.home__companyName {
   font-size: 20px;
   font-family: 'Metal Mania', cursive;
   font-weight: 300;
 }
 
-.home__getStartedButton{
-  width:100%;
-  height:40px;
+.home__getStartedButton {
+  width: 100%;
+  height: 40px;
   margin-top: 40px;
   font-family: 'Roboto Mono', monospace;
-  color:black;
-  background-image: linear-gradient(#fecc4c,#ffac33);
+  color: black;
+  background-image: linear-gradient(#fecc4c, #ffac33);
   border: 1px solid #feac32;
   font-size: large;
   cursor: pointer;
 }
 
-@media screen and (min-width:980px) {
-  .home__companyName{
+@media screen and (min-width: 980px) {
+  .home__companyName {
     font-size: 24px;
-    
   }
 }
 
 @media screen and (max-width: 980px) {
-  .home{
+  .home {
     width: 99%;
     margin: 20px auto;
-    margin-left:0;
+    margin-left: 0;
     padding: 20px;
   }
 
-  .home__alumni{
-    width: 100%
+  .home__alumni {
+    width: 100%;
   }
-
 }
-
