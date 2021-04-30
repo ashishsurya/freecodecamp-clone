@@ -1,9 +1,13 @@
+import DevicesIcon from '@material-ui/icons/Devices';
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Home.css';
 
 const names = ['Apple', 'Google', 'Microsoft', 'Amazon', 'Spotify'];
 
 const Home = () => {
+  const history = useHistory();
+
   return (
     <div className='home'>
       <div className='home__Ad'>
@@ -16,7 +20,7 @@ const Home = () => {
         Earn certifications.
       </div>
       <div className='home__alumni'>
-        <article style={{textAlign:'justify'}}>
+        <article style={{ textAlign: 'justify' }}>
           Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten
           jobs at tech companies including:
         </article>
@@ -35,9 +39,15 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <button className="home__getStartedButton">
+      <button
+        onClick={() => {
+          history.push('/learn');
+        }}
+        className='home__getStartedButton'
+      >
         Get Started ( it's free)
       </button>
+      <DevicesIcon fontSize='large'/>
     </div>
   );
 };

@@ -4,12 +4,16 @@ import { auth } from '../firebase';
 import { useStateValue } from '../StateProvider';
 import './Register.css';
 const Register = () => {
+  const [{ user }, dispatch] = useStateValue();
+  console.log(user);
   const history = useHistory();
+
+  if (user) {
+    history.replace('/');
+  }
   // state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const [{ user }, dispatch] = useStateValue('');
 
   const headerStyle = {
     width: '100%',
@@ -30,7 +34,7 @@ const Register = () => {
     await auth
       .signInWithEmailAndPassword(email, password)
       .then((authUser) => {
-        history.push('/');
+        history.goBack();
       })
       .catch((error) => {
         alert(error.message);
@@ -90,7 +94,10 @@ const Register = () => {
             Login
           </button>
           <button className='register__registerButton' onClick={register}>
-            Register
+            Register{' '}
+            <small>
+              (register here only by simply providing email and password)
+            </small>
           </button>
         </form>
       </div>

@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import Register from './components/Register';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
+import SignInLearn from './components/SignInLearn';
+import SignOutLearn from './components/SignOutLearn';
+import Course from './Course';
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
+  console.log(user);
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -20,18 +24,22 @@ function App() {
         dispatch({ type: 'SET_USER', username: null });
       }
     });
+    return unsubscribe;
   }, []);
   return (
     <Router>
       <Route exact={true} path='/'>
-        <Header />
+        <Header headerRoute='/learn' />
         <Home />
       </Route>
       <Route path='/learn'>
-        <Header />
+        <Header headerRoute='/' />
+        {user ? <SignInLearn /> : <SignOutLearn />}
       </Route>
-      <Route path='/signin'>
-        <Register />
+      <Route path='/signin'></Route>
+      <Route path='/learn/:id' children={<Course />}>
+        <Header />
+        <Course />
       </Route>
     </Router>
   );

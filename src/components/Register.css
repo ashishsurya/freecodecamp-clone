@@ -58,6 +58,7 @@
   border: 1px solid rgb(155, 153, 153);
   padding: 5px 3px;
   width: 96%;
+  outline: none;
 }
 
 .register__signinButton {

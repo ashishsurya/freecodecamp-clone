@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+.signoutlearn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 60%;
+  margin: 70px auto;
+}
+
+.signoutlearn > header {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 45px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.signoutlearn > strong {
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.signoutlearn > article {
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22.5px;
+  margin: 5px 0;
+}
+
+.signoutlearn__signinButton {
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 1px solid #feac32;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.signoutlearn__certifications {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .signoutlearn {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .signoutlearn {
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .signoutlearn__signinButton {
+    font-size: large;
+  }
+}

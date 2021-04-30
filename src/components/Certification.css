@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+.certification {
+  background-color: #d0d0d5;
+  cursor: pointer;
+}
+
+.certification > p {
+  font-family: Roboto Mono, monospace;
+  font-weight: 400;
+  font-size: 19.2px;
+  padding: 20px;
+}

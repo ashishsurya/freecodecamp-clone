@@ -37,7 +37,7 @@
   padding: 10px;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 180px;
 }
 
 .header__Button {
@@ -45,21 +45,35 @@
   background-color: #0a0a23;
   border: none;
   color: white;
-  width: 80px;
+  width: 70px;
   padding: 5px;
-  border: 1px solid;
+  /* border: 1px solid; */
   cursor: pointer;
   height: 30px;
   font-size: large;
+  outline: none;
 }
 
 .signIn {
   background-color: #fecc4c;
   color: black;
 }
-
+.menu {
+  border: 0.5px solid;
+}
 @media screen and (max-width: 980px) {
   .header__searchInput {
     display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header__Button {
+    width: 60px;
+
+    font-size: medium;
+  }
+  .header__buttons {
+    margin-left: -20px;
   }
 }

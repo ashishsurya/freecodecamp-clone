@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 import { useStateValue } from '../StateProvider';
 import './Header.css';
-const Header = () => {
+const Header = ({ headerRoute }) => {
   const [{ user }, dispatch] = useStateValue();
   const logOut = async () => {
     await auth.signOut().then(() => {
@@ -19,7 +19,7 @@ const Header = () => {
         className='header__searchInput'
       />
       <Link
-        to='/'
+        to={headerRoute}
         style={{ color: 'white', textDecoration: 'none', marginRight: '50px' }}
       >
         <p className='header__logo'>freeCodeCamp</p>
