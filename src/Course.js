@@ -15,7 +15,7 @@ const Course = () => {
   }, []);
   return (
     <>
-      <Header />
+      <Header headerRoute='/learn' />
       <div>{name}</div>
     </>
   );

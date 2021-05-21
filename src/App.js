@@ -32,13 +32,14 @@ function App() {
         <Header headerRoute='/learn' />
         <Home />
       </Route>
-      <Route path='/learn'>
+      <Route exact path='/learn'>
         <Header headerRoute='/' />
         {user ? <SignInLearn /> : <SignOutLearn />}
       </Route>
-      <Route path='/signin'></Route>
-      <Route path='/learn/:id' children={<Course />}>
-        <Header />
+      <Route path='/signin'>
+        <Register />
+      </Route>
+      <Route path='/learn/:id'>
         <Course />
       </Route>
     </Router>

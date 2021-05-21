@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
+import { useStateValue } from '../StateProvider';
 import Certification from './Certification';
 import './SignOutLearn.css';
 
@@ -37,6 +38,8 @@ export const getCertifications = () => {
 
 const SignOutLearn = () => {
   const history = useHistory();
+
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className='signoutlearn'>

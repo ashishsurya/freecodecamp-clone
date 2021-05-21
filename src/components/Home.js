@@ -1,4 +1,3 @@
-import DevicesIcon from '@material-ui/icons/Devices';
 import React from 'react';
 import { useHistory } from 'react-router';
 import './Home.css';
@@ -47,7 +46,6 @@ const Home = () => {
       >
         Get Started ( it's free)
       </button>
-      <DevicesIcon fontSize='large'/>
     </div>
   );
 };
